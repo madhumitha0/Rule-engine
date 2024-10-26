@@ -16,17 +16,16 @@ python main.py
 
 **COMPONENTS**
 
-1. Backend :  main.py (Flask Python SQLAlchemy)
-2. Frontend : rlg.py (Tkinter UI Python)
-3. Automated test script : test.py (Automatically test the app) (requests)
+1. Backend: main.py (Flask, SQLAlchemy, SQLite)
+2. Frontend: rlg.py (Tkinter UI)
+3. Automated Testing: test.py (Automates app testing with requests)
 
 
 **APP COMPONENTS**
 
-1. CREATE RULE : will create a rule and show id in UI. for eg: you create two rules it will create two rules with id 1 and 2
-2. Combine RULE: for eg : you add rule number id with comma separated format, it will create a mega rule with separate id on the tkinteR UI
-3. EVALUATE RULE : Add the mega rule Id and data params that you need to provide in json format
-
+1. Create Rule: Creates a rule and assigns it an ID (e.g., Rule 1 and Rule 2).
+2. Combine Rules: Combines rule IDs (comma-separated) into a "mega rule" with a unique ID in the Tkinter UI.
+3. Evaluate Rule: Evaluates a rule using the mega rule ID and data in JSON format.
 
 **API Endpoints**
 
@@ -190,15 +189,15 @@ if __name__ == "__main__":
 
     # Evaluate Combined Rule
     data = {
-        "age": 35,
+        "age": 22,
         "department": "Sales",
-        "salary": 60000,
-        "experience": 6
+        "salary": 50000,
+        "experience": 3
     }
     test_evaluate_rule(combined_rule_id, data)
 
     # Modify Rule
-    new_rule_string = "age > 40 AND department = 'HR'"
+    new_rule_string = "age > 30 AND department = 'HR'"
     test_modify_rule(rule_id_1, new_rule_string)
 
 Summary
