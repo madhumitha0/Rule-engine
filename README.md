@@ -189,10 +189,10 @@ if __name__ == "__main__":
 
     # Evaluate Combined Rule
     data = {
-        "age": 22,
+        "age": 35,
         "department": "Sales",
-        "salary": 50000,
-        "experience": 3
+        "salary": 60000,
+        "experience": 6
     }
     test_evaluate_rule(combined_rule_id, data)
 
